@@ -25,6 +25,7 @@ CREATE TABLE account (
     interestrate number(4,3),
     accounttype varchar2(10),
     cssn varchar2(9),
+    accountbalance number(8,2),
     primary key (accountnum),
     foreign key (cssn) references customer(ssn)
 );
@@ -85,73 +86,72 @@ VALUES ('Jack', 'Anderson', '123456789', '555 Maple Ln', '730', '123456789');
 
 -- Insert records for accounts
 -- Chat GPT prompt:
--- do this except with 10 unique names: INSERT INTO customer (Fname, Lname, ssn, address, creditscore, routingnumber) VALUES ('Alice', 'Johnson', '111111111', '789 Oak St', '780', '123456789');
-INSERT INTO account (accountnum, interestrate, accounttype, cssn)
-VALUES ('ACC001', 0.02, 'savings', '111111111');
+-- do this except with 10 unique names: INSERT INTO customer (Fname, Lname, ssn, address, creditscore, routingnumber, accountbalance) VALUES ('Alice', 'Johnson', '111111111', '789 Oak St', '780', '123456789', '23042.28');
+INSERT INTO account (accountnum, interestrate, accounttype, cssn, accountbalance)
+VALUES ('ACC001', 0.02, 'savings', '111111111', 75028.29);
 
-INSERT INTO account (accountnum, interestrate, accounttype, cssn)
-VALUES ('ACC002', 0.03, 'checking', '111111111');
+INSERT INTO account (accountnum, interestrate, accounttype, cssn, accountbalance)
+VALUES ('ACC002', 0.03, 'checking', '111111111', 7830.01);
 
-INSERT INTO account (accountnum, interestrate, accounttype, cssn)
-VALUES ('ACC003', 0.025, 'savings', '222222222');
+INSERT INTO account (accountnum, interestrate, accounttype, cssn, accountbalance)
+VALUES ('ACC003', 0.025, 'savings', '222222222', 40293.25);
 
-INSERT INTO account (accountnum, interestrate, accounttype, cssn)
-VALUES ('ACC004', 0.035, 'checking', '222222222');
+INSERT INTO account (accountnum, interestrate, accounttype, cssn, accountbalance)
+VALUES ('ACC004', 0.035, 'checking', '222222222',7693.10);
 
-INSERT INTO account (accountnum, interestrate, accounttype, cssn)
-VALUES ('ACC005', 0.02, 'savings', '333333333');
+INSERT INTO account (accountnum, interestrate, accounttype, cssn, accountbalance)
+VALUES ('ACC005', 0.02, 'savings', '333333333', 8493.21);
 
-INSERT INTO account (accountnum, interestrate, accounttype, cssn)
-VALUES ('ACC006', 0.03, 'checking', '333333333');
+INSERT INTO account (accountnum, interestrate, accounttype, cssn, accountbalance)
+VALUES ('ACC006', 0.03, 'checking', '333333333', 1294.21);
 
-INSERT INTO account (accountnum, interestrate, accounttype, cssn)
-VALUES ('ACC007', 0.025, 'savings', '444444444');
+INSERT INTO account (accountnum, interestrate, accounttype, cssn, accountbalance)
+VALUES ('ACC007', 0.025, 'savings', '444444444', 653985.93);
 
-INSERT INTO account (accountnum, interestrate, accounttype, cssn)
-VALUES ('ACC008', 0.035, 'checking', '444444444');
+INSERT INTO account (accountnum, interestrate, accounttype, cssn, accountbalance)
+VALUES ('ACC008', 0.035, 'checking', '444444444', 90213.43);
 
-INSERT INTO account (accountnum, interestrate, accounttype, cssn)
-VALUES ('ACC009', 0.02, 'savings', '555555555');
+INSERT INTO account (accountnum, interestrate, accounttype, cssn, accountbalance)
+VALUES ('ACC009', 0.02, 'savings', '555555555', 10024.87);
 
-INSERT INTO account (accountnum, interestrate, accounttype, cssn)
-VALUES ('ACC010', 0.03, 'checking', '555555555');
+INSERT INTO account (accountnum, interestrate, accounttype, cssn, accountbalance)
+VALUES ('ACC010', 0.03, 'checking', '555555555', 3029.12);
 
-INSERT INTO account (accountnum, interestrate, accounttype, cssn)
-VALUES ('ACC011', 0.025, 'savings', '666666666');
+INSERT INTO account (accountnum, interestrate, accounttype, cssn, accountbalance)
+VALUES ('ACC011', 0.025, 'savings', '666666666', 359283.12);
 
-INSERT INTO account (accountnum, interestrate, accounttype, cssn)
-VALUES ('ACC012', 0.035, 'checking', '666666666');
+INSERT INTO account (accountnum, interestrate, accounttype, cssn, accountbalance)
+VALUES ('ACC012', 0.035, 'checking', '666666666', 23012.04);
 
-INSERT INTO account (accountnum, interestrate, accounttype, cssn)
-VALUES ('ACC013', 0.02, 'savings', '777777777');
+INSERT INTO account (accountnum, interestrate, accounttype, cssn, accountbalance)
+VALUES ('ACC013', 0.02, 'savings', '777777777', 8756.25);
 
-INSERT INTO account (accountnum, interestrate, accounttype, cssn)
-VALUES ('ACC014', 0.03, 'checking', '777777777');
+INSERT INTO account (accountnum, interestrate, accounttype, cssn, accountbalance)
+VALUES ('ACC014', 0.03, 'checking', '777777777', 1023.21);
 
-INSERT INTO account (accountnum, interestrate, accounttype, cssn)
-VALUES ('ACC015', 0.025, 'savings', '888888888');
+INSERT INTO account (accountnum, interestrate, accounttype, cssn, accountbalance)
+VALUES ('ACC015', 0.025, 'savings', '888888888', 23456.32);
 
-INSERT INTO account (accountnum, interestrate, accounttype, cssn)
-VALUES ('ACC016', 0.035, 'checking', '888888888');
+INSERT INTO account (accountnum, interestrate, accounttype, cssn, accountbalance)
+VALUES ('ACC016', 0.035, 'checking', '888888888', 8437.92);
 
-INSERT INTO account (accountnum, interestrate, accounttype, cssn)
-VALUES ('ACC017', 0.02, 'savings', '999999999');
+INSERT INTO account (accountnum, interestrate, accounttype, cssn, accountbalance)
+VALUES ('ACC017', 0.02, 'savings', '999999999', 54203.23);
 
-INSERT INTO account (accountnum, interestrate, accounttype, cssn)
-VALUES ('ACC018', 0.03, 'checking', '999999999');
+INSERT INTO account (accountnum, interestrate, accounttype, cssn, accountbalance)
+VALUES ('ACC018', 0.03, 'checking', '999999999', 21032.23);
 
-INSERT INTO account (accountnum, interestrate, accounttype, cssn)
-VALUES ('ACC019', 0.025, 'savings', '123456789');
+INSERT INTO account (accountnum, interestrate, accounttype, cssn, accountbalance)
+VALUES ('ACC019', 0.025, 'savings', '123456789', 473924.12);
 
-INSERT INTO account (accountnum, interestrate, accounttype, cssn)
-VALUES ('ACC020', 0.035, 'checking', '123456789');
+INSERT INTO account (accountnum, interestrate, accounttype, cssn, accountbalance)
+VALUES ('ACC020', 0.035, 'checking', '123456789', 9312.45);
 
 
 
 --Insert loans
 --Chat GPT prompt:
---use this format for the account inserts where the last 10 customers you gave me has <=3 loans: INSERT INTO loan (loannum, loantype, maturity, interestrate, amount, cssn)
-VALUES ('LOAN001', 'business loan', 60, 0.06, 50000, '111111111');
+--use this format for the account inserts where the last 10 customers you gave me has <=3 loans: INSERT INTO loan (loannum, loantype, maturity, interestrate, amount, cssn) VALUES ('LOAN001', 'business loan', 60, 0.06, 50000, '111111111');
 INSERT INTO loan (loannum, loantype, maturity, interestrate, amount, cssn)
 VALUES ('LOAN001', 'business', 6, 0.06, 50000, '111111111');
 
@@ -189,4 +189,13 @@ VALUES ('LOAN009', 'house', 2, 0.04, 300000, '888888888');
 
 INSERT INTO loan (loannum, loantype, maturity, interestrate, amount, cssn)
 VALUES ('LOAN010', 'business', 6, 0.06, 50000, '999999999');
+
+-- Test queries
+-- Find all information about employees where their bank is located in Houston, order by last name in ascending order.
+select * from customer c, branch b where c.routingnumber = b.routingnum and b.city = 'Houston' order by c.lname asc;
+-- Find the sum of the loans for every customer that has a credit score above 750.
+select sum(amount) as Total_Safe_Loans from loan l, customer c where c.ssn = l.cssn and c.creditscore >= 750;
+-- Find the average interest rate of all of the accounts run through Houston using a nested query
+select round(avg(interestrate), 3) as Average_Interest_Rate from account a, customer c where c.ssn = a.cssn and c.routingnumber = 
+(select b.routingnum from branch b where b.city = 'Houston');
 
