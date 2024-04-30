@@ -190,7 +190,3 @@ VALUES ('LOAN009', 'house', 2, 0.04, 300000, '888888888');
 INSERT INTO loan (loannum, loantype, maturity, interestrate, amount, cssn)
 VALUES ('LOAN010', 'business', 6, 0.06, 50000, '999999999');
 
-
-
-
-
