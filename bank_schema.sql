@@ -40,6 +40,8 @@ CREATE TABLE loan (
     foreign key (cssn) references customer(ssn)
 );
 
+--Generated random data by ChatGPT 3.5 
+
 --Insert branches
 INSERT INTO branch(routingnum, city)
 VALUES ('123456789', 'Houston');
