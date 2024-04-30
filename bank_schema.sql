@@ -42,14 +42,17 @@ CREATE TABLE loan (
 
 --Generated random data by ChatGPT 3.5 
 
---Insert branches
+--Insert branches:
+--use this format for the branch inserts: INSERT INTO branch(routingnum,city) VALUES ('948563293', 'Houston');
 INSERT INTO branch(routingnum, city)
 VALUES ('123456789', 'Houston');
 
 INSERT INTO branch(routingnum, city)
 VALUES ('987654321', 'New York');
 
--- Insert records for customers
+-- Insert records for customers:
+-- Chat GPT prompt:
+-- use this format for the account inserts where none of last 10 customers you gave me has more than two accounts: INSERT INTO account (accountnum, interestrate, accounttype, cssn) VALUES ('ACC001', 0.02, 'savings', '111111111');
 INSERT INTO customer (Fname, Lname, ssn, address, creditscore, routingnumber)
 VALUES ('Alice', 'Johnson', '111111111', '789 Oak St', '780', '123456789');
 
@@ -81,6 +84,8 @@ INSERT INTO customer (Fname, Lname, ssn, address, creditscore, routingnumber)
 VALUES ('Jack', 'Anderson', '123456789', '555 Maple Ln', '730', '123456789');
 
 -- Insert records for accounts
+-- Chat GPT prompt:
+-- do this except with 10 unique names: INSERT INTO customer (Fname, Lname, ssn, address, creditscore, routingnumber) VALUES ('Alice', 'Johnson', '111111111', '789 Oak St', '780', '123456789');
 INSERT INTO account (accountnum, interestrate, accounttype, cssn)
 VALUES ('ACC001', 0.02, 'savings', '111111111');
 
@@ -144,6 +149,9 @@ VALUES ('ACC020', 0.035, 'checking', '123456789');
 
 
 --Insert loans
+--Chat GPT prompt:
+--use this format for the account inserts where the last 10 customers you gave me has <=3 loans: INSERT INTO loan (loannum, loantype, maturity, interestrate, amount, cssn)
+VALUES ('LOAN001', 'business loan', 60, 0.06, 50000, '111111111');
 INSERT INTO loan (loannum, loantype, maturity, interestrate, amount, cssn)
 VALUES ('LOAN001', 'business', 6, 0.06, 50000, '111111111');
 
